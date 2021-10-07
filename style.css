@@ -1,0 +1,144 @@
+body{
+    position: relative;
+    min-height: 100%;
+    margin: 0px;         
+}
+.header{
+    background-color: maroon;
+    padding: 10px;    
+}
+h1{
+    background-color: maroon;
+    padding: 10px; 
+    text-align: center;
+    color: rgba(255, 123, 0, 0.842);
+}
+.logo{
+    float: right;
+}
+ul {
+    background-color: white;
+    display:block;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;    
+}
+ul li {
+    display: inline-block;
+    align-items: right ;
+}
+ul li a{
+    text-decoration: none;
+    padding: 15px;
+    color:black;
+    display: inline-block;
+}
+ul li a:hover {
+    color: rgb(175, 174, 174);
+}
+ul li ul {
+    position: absolute;
+    width: 250px; 
+    padding-top: 2px;   
+    display: none;
+}
+ul li ul li { 
+    background:white; 
+    display: block; 
+}
+ul li ul li:hover {
+    color: rgb(175, 174, 174);
+}
+ul li ul li a {
+    display:block ;
+    padding: 5px;
+} 
+ul li:hover ul {
+    display: block;
+  
+}
+
+.dashboard{
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 100px;
+}
+.Occupied{
+    background: green;
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    margin-right: 260px;
+}
+.Unoccupied{
+    background: blue;
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    margin-right: 260px;
+}
+.Double-Booked{
+    background: red;
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    margin-right: 260px;
+}
+.text{
+    position: absolute;
+    margin-left: 120px;
+    padding-top: 15px;
+}
+.footer{    
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: maroon;
+    text-align: center;
+    color: rgba(255, 123, 0, 0.842); 
+    position: fixed;   
+}
+@media screen and (max-width:767px){
+    body{
+        margin: 0px;
+    }
+    .header{
+        background-color: maroon;
+        padding: 5px; 
+    }
+    h1{
+        text-align: center;
+        color: rgba(255, 123, 0, 0.842);
+    }
+    .logo{
+        float: left;
+    }
+    .menu {
+        list-style: none;
+        float: right;
+     }
+     .menu li{
+         display: block;
+     }
+    a{
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+    }
+    a:hover{
+        color: rgb(156, 138, 138);
+    } 
+    
+    .footer{
+        padding: 2px;
+        margin-bottom: 0px;
+        background-color: maroon;
+        text-align: center;
+        color: rgba(255, 123, 0, 0.842);
+    }
+    
+}

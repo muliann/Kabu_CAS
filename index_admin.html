@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+        position: relative;
+        min-height: 100%;
+        margin: 0px;         
+    }
+    .header{
+        background-color: maroon;
+        height:120px;
+        text-align: center;
+        padding: 5px;    
+    }
+    h1{  
+        color: rgba(255, 123, 0, 0.842);
+    }
+    .logo{
+        float: left;
+    }    
+    .menu{
+        position: absolute;
+        height: 550px;
+        width: 23%;
+        background-color: whitesmoke;
+    }
+    li {
+        list-style: none;
+    }
+     a{
+        text-decoration: none;
+        color:black;
+        display: block;
+    }
+    a:hover {
+        color:rgb(168, 131, 131);;
+    }
+    .schools li{
+        padding-bottom: 5px;
+        font-size: large;
+        font-weight: bolder;
+    }
+    .schools li a{
+        font-weight: bolder;
+    } 
+    .schools li .subschools {      
+        display: none;
+    }
+    .schools li .subschools li{
+        font-size: medium;
+    }
+    .schools li .subschools li a{
+        font-weight: lighter;
+    }
+   .schools li:hover .subschools{
+       display: block;
+   }
+    .schools li .subschools li ul li{
+        display: inline-block;
+    }
+    .schools li .subschools li ul li a{
+        display: inline-block;
+        padding: 5px;
+    }
+   .schools li .subschools li ul {      
+    display: none;
+    }
+   .schools li .subschools li:hover  ul{
+    display: block;
+    }
+
+    .instructions{
+       margin-top: 10px;
+        position: absolute;
+        height: 80px;
+        width: 70%;
+        margin-left: 24%;
+        color: black;
+        background-color: rgba(241, 178, 119, 0.842);
+        text-align: center;
+    }
+    h6{
+        color: rgba(255, 123, 0, 0.842);
+    }
+    .steps{
+        margin-top: 100px;
+        position: absolute;
+        height: 400px;
+        width: 68%;
+        margin-left: 20%;
+        color: black;
+        padding-left: 80px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+    }
+      
+    td, th {
+        border: 1px solid rgba(241, 178, 119, 0.842);
+        text-align: center;
+        font-weight: bold;
+    }
+    .none {
+        border: none;
+        text-align: center;
+    }                
+    .footer{    
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 10px;
+        background-color: maroon;
+        text-align: center;
+        color: rgba(255, 123, 0, 0.842); 
+        position: fixed;   
+    }
+  </style>
+  <title>SSET</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="http://eserver.kabarak.ac.ke/students/img/logo-main.png" alt="KABU_LOGO">
+        </div>
+        <h1>CLASS TIMETABLE</h1>    
+    </div>
+    <div class="menu">
+        <ul class="schools">
+        <li><a href="sset.php">School of Science Engineering and Technology</a>
+                <ul class="subschools">
+                    <li><a href="#cs">Computer Science</a>
+                        <ul>
+                            <li><a href="#y1s1">Y1S1</a></li>
+                            <li><a href="#y1s2">Y2S1</a></li>
+                            <li><a href="#y2s1">Y3S1</a></li>
+                            <li><a href="#y2s2">Y4S1</a></li>
+                            <li><a href="#y3s1">Y1S2</a></li>
+                            <li><a href="#y3s2">Y2S2</a></li>
+                            <li><a href="#y4s1">Y3S2</a></li>
+                            <li><a href="#y4s2">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#cybersec">Cyber Security</a>
+                        <ul>
+                            <li><a href="#y1s1">Y1S1</a></li>
+                            <li><a href="#y1s2">Y2S1</a></li>
+                            <li><a href="#y2s1">Y3S1</a></li>
+                            <li><a href="#y2s2">Y4S1</a></li>
+                            <li><a href="#y3s1">Y1S2</a></li>
+                            <li><a href="#y3s2">Y2S2</a></li>
+                            <li><a href="#y4s1">Y3S2</a></li>
+                            <li><a href="#y4s2">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#it">Information Technology</a>
+                        <ul>
+                            <li><a href="#y1s1">Y1S1</a></li>
+                            <li><a href="#y1s2">Y2S1</a></li>
+                            <li><a href="#y2s1">Y3S1</a></li>
+                            <li><a href="#y2s2">Y4S1</a></li>
+                            <li><a href="#y3s1">Y1S2</a></li>
+                            <li><a href="#y3s2">Y2S2</a></li>
+                            <li><a href="#y4s1">Y3S2</a></li>
+                            <li><a href="#y4s2">Y4S2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">School of Law</a>
+                <ul class="subschools">
+                    <li><a href="#">Criminology</a>
+                        <ul>
+                            <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Legal Studies</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="justandpeace">Justice and Peace</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">School of Health Science</a>
+                <ul class="subschools">
+                    <li><a href="#">Public Health</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nursing</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>                    
+                    <li><a href="#">Food and nutrition</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">School of Education</a>
+                <ul class="subschools">
+                    <li><a href="#">Pure Math</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Mathematics and Chemistry</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">English Literature</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">School of Business</a>
+                <ul class="subschools">
+                    <li><a href="#">Business Information Technology</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Economics and Statistics</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Finance</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"> School of Music</a>
+                <ul class="subschools">
+                    <li><a href="#">Musicology</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Church Music</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Music Education</a>
+                        <ul>
+                        <li><a href="#">Y1S1</a></li>
+                            <li><a href="#">Y2S1</a></li>
+                            <li><a href="#">Y3S1</a></li>
+                            <li><a href="#">Y4S1</a></li>
+                            <li><a href="#">Y1S2</a></li>
+                            <li><a href="#">Y2S2</a></li>
+                            <li><a href="#">Y3S2</a></li>
+                            <li><a href="#">Y4S2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="instructions">
+        <h3>INSTRUCTIONS</h3>
+        <h6> <i>You are logged in as an administrator</i></h6>
+    </div>
+    <div class="steps">
+        
+            <p style="padding: 180px;"><b>Kindly navigate to the specific School > Department > Year > Semester you'd like to make adjustments</b> </li>
+      
+    </div> 
+    <div class="footer">
+        &copy; <script>document.write(new Date().getFullYear())</script> -KABU University.
+    </div>
+</body>
+</html>
